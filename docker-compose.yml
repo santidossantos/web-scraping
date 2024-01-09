@@ -1,0 +1,26 @@
+version: '3'
+services:
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    restart: unless-stopped 
+    ports:
+      - '27017:27017'
+  loopback:
+    container_name: loopback
+    restart: unless-stopped
+    build: ./web-scraping-backend
+    ports:
+      - '3000:3000'
+    links:
+      - mongo
+    depends_on:
+      - mongo
+  vue:
+    container_name: "vue"
+    build: ./web-scraping-frontend
+    restart: unless-stopped
+    ports:
+      - 5173:5173
+    depends_on:
+      - loopback
