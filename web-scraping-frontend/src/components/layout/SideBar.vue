@@ -15,10 +15,6 @@ const user: User = getUserData as User
         </v-list>
 
         <v-divider></v-divider>
-
-        <v-list density="compact" nav>
-          <v-list-item prepend-icon="mdi-help-circle" title="Ayuda"></v-list-item>
-        </v-list>
       </v-navigation-drawer>
     </v-layout>
   </v-card>

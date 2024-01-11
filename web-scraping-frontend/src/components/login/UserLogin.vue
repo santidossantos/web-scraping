@@ -3,7 +3,7 @@
 import VueWriter from 'vue-writer'
 import LoginButton from '@/components/buttons/LoginButton.vue'
 
-const arr = ['BIENVENID@', 'WEB SCRAPING PORTAL']
+const words = ['BIENVENID@', 'WEB SCRAPING PORTAL']
 </script>
 
 <template>
@@ -12,7 +12,7 @@ const arr = ['BIENVENID@', 'WEB SCRAPING PORTAL']
       <div class="form-container sign-in-container">
         <div class="card">
           <h1>
-            <VueWriter class="writter" :array="arr" :typeSpeed="70" />
+            <VueWriter class="writter" :array="words" :typeSpeed="70" />
           </h1>
 
           <img src="src/assets/img/login.png" width="250" height="250" />
