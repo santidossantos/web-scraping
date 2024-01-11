@@ -3,12 +3,12 @@ services:
   mongo:
     container_name: mongo
     image: mongo:latest
-    restart: unless-stopped 
+    restart: always
     ports:
       - '27017:27017'
   loopback:
     container_name: loopback
-    restart: unless-stopped
+    restart: always
     build: ./web-scraping-backend
     ports:
       - '3000:3000'
@@ -19,7 +19,7 @@ services:
   vue:
     container_name: "vue"
     build: ./web-scraping-frontend
-    restart: unless-stopped
+    restart: always
     ports:
       - 5173:5173
     depends_on:
